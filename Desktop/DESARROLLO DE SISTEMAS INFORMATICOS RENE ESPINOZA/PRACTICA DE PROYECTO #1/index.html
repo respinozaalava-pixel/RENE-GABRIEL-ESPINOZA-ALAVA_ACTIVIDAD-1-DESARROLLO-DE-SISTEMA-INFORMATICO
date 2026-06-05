@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sistema de Gestión de Incidentes - Inicio</title> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            /* Cambio de tipografía principal: ahora usa Roboto, una fuente más moderna */
+            font-family: 'Roboto', 'Segoe UI', sans-serif; 
+        } 
+        body { 
+            /* Fondo más suave y claro */
+            background-color: #f8f9fa; 
+            line-height: 1.6; 
+        } 
+        nav { 
+            /* Color de navegación cambiado a tono azul más moderno */
+            background-color: #165DFF; 
+            padding: 15px; 
+        } 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 20px; 
+            margin: 0 5px; 
+            font-weight: 500; /* Grosor de letra más equilibrado */
+            display: inline-block; 
+            /* Cambio de tipografía para menú */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+        } 
+        nav a:hover, .activo { 
+            /* Color de resaltado más brillante */
+            background-color: #4080ff; 
+            border-radius: 6px; /* Bordes un poco más redondeados */
+        } 
+        header { 
+            /* Encabezado con color distinto, combinado con la barra de navegación */
+            background-color: #0F48C0; 
+            color: white; 
+            padding: 25px; /* Un poco más de espacio */
+            text-align: center; 
+        } 
+        header h1 {
+            /* Tipografía distinta para el título principal */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+        main { 
+            max-width: 1000px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+        } 
+        section { 
+            background-color: white; 
+            padding: 25px; 
+            margin-bottom: 20px; 
+            border-radius: 10px; /* Bordes más suaves */
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08); /* Sombra más suave */
+        } 
+        h2 { 
+            /* Color de títulos cambiado a gris azulado elegante */
+            color: #1e293b; 
+            margin-bottom: 20px; 
+            text-align: center; 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        } 
+        .resumen-estado { 
+            display: flex; 
+            justify-content: space-around; 
+            text-align: center; 
+            flex-wrap: wrap; 
+            gap: 15px; 
+        } 
+        article { 
+            /* Fondo de tarjetas con tono gris muy claro */
+            background-color: #f1f5f9; 
+            padding: 22px; 
+            border-radius: 10px; 
+            width: 220px; 
+            transition: transform 0.2s; /* Pequeño efecto visual al pasar el mouse */
+        } 
+        article:hover {
+            transform: translateY(-3px);
+        }
+        article h3 { 
+            font-size: 2.2em; 
+            /* Color rojo más intenso y profesional */
+            color: #dc2626; 
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        } 
+        article p {
+            color: #334155;
+            font-weight: 500;
+        }
+        footer { 
+            /* Pie de página con mismo color que la navegación */
+            background-color: #165DFF; 
+            color: white; 
+            text-align: center; 
+            padding: 18px; 
+            margin-top: 30px; 
+            font-size: 14px;
+        } 
+    </style>
+    <!-- Agregamos las fuentes nuevas desde Google Fonts para que se vean bien -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head> 
+<body> 
+ 
+    <header> 
+        <h1>    Sistema de Gestión de Incidentes</h1> 
+        <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="index.html" class="activo">        Inicio</a> 
+        <a href="reportar.html">           Reportar Incidente</a> 
+        <a href="tickets.html">        Ver Tickets</a> 
+    </nav> 
+ 
+    <main> 
+        <section> 
+            <h2>Bienvenido al Panel Principal</h2> 
+            <p style="text-align:center; font-size:1.1em; color:#475569;"> 
+                Aquí podrás registrar nuevos incidentes, consultar el estado de tus 
+solicitudes y gestionar los reportes del sistema. 
+            </p> 
+        </section> 
+ 
+        <section> 
+            <h2>        Resumen del Sistema</h2> 
+            <div class="resumen-estado"> 
+                <article> 
+                    <h3>12</h3> 
+                    <p>Tickets Abiertos</p> 
+                </article> 
+                <article> 
+                    <h3>05</h3> 
+                    <p>En Proceso</p> 
+                </article> 
+                <article> 
+                    <h3>28</h3> 
+                    <p>Solucionados</p> 
+                </article> 
+                <article> 
+                    <h3>45</h3> 
+                    <p>Total Registrados</p> 
+                </article> 
+            </div> 
+        </section> 
+    </main> 
+ 
+    <footer> 
+        <p>© 2026 - Desarrollado por Estudiante | Universidad Técnica de Manabí</p> 
+    </footer> 
+ 
+</body> 
+</html>

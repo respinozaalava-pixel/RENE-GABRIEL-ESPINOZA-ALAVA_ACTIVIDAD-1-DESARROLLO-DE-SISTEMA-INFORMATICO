@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Listado de Tickets Registrados</title> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            /* 👉 NUEVA TIPOGRAFÍA: Cambiada a Roboto (moderna y legible) */
+            font-family: 'Roboto', 'Segoe UI', sans-serif; 
+        } 
+        body { 
+            /* 👉 NUEVO COLOR DE FONDO: tono más claro y suave */
+            background-color: #f0f4f8; 
+            line-height: 1.6; 
+        } 
+        nav { 
+            /* 👉 NUEVO COLOR DE BARRA DE NAVEGACIÓN: azul más vibrante */
+            background-color: #165DFF; 
+            padding: 15px; 
+        } 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 20px; 
+            margin: 0 5px; 
+            font-weight: 500; /* Grosor de letra ajustado */
+            display: inline-block; 
+        } 
+        nav a:hover, .activo { 
+            /* 👉 COLOR AL PASAR EL RATÓN / ACTIVO: tono más oscuro del mismo azul */
+            background-color: #0F48C9; 
+            border-radius: 6px; 
+        } 
+        header { 
+            /* 👉 NUEVO COLOR DE ENCABEZADO: combina con la barra de navegación */
+            background-color: #0F48C9; 
+            color: white; 
+            padding: 22px; 
+            text-align: center; 
+            /* 👉 Cambio ligero en tamaño de letra del título principal */
+            font-size: 1.05rem;
+        } 
+        main { 
+            max-width: 1000px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+        } 
+        section { 
+            background-color: white; 
+            padding: 25px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(22, 93, 255, 0.08); /* Sombra con tono del nuevo color */
+        } 
+        h2 { 
+            /* 👉 NUEVO COLOR DE TÍTULOS: mismo azul principal */
+            color: #165DFF; 
+            margin-bottom: 20px; 
+            text-align: center; 
+            font-weight: 600;
+        } 
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 15px; 
+        } 
+        table th { 
+            /* 👉 NUEVO COLOR DE ENCABEZADO DE TABLA */
+            background-color: #165DFF; 
+            color: white; 
+            padding: 12px; 
+            text-align: left;
+            font-weight: 500; 
+        } 
+        table td { 
+            padding: 12px; 
+            border-bottom: 1px solid #e2e8f0; /* Borde más suave */
+        } 
+        tr:hover { 
+            /* 👉 COLOR AL PASAR EL RATÓN SOBRE FILAS: tono muy suave */
+            background-color: #f5f9ff; 
+        } 
+        /* 👉 COLORES DE ESTADOS ACTUALIZADOS, más brillantes y modernos */
+        .estado-alta { color: #E53E3E; font-weight: bold; } 
+        .estado-media { color: #ED8936; font-weight: bold; } 
+        .estado-baja { color: #38A169; font-weight: bold; } 
+        .estado-proceso { color: #3182CE; font-weight: bold; } 
+        footer { 
+            /* 👉 NUEVO COLOR DE PIE DE PÁGINA: igual al encabezado principal */
+            background-color: #0F48C9; 
+            color: white; 
+            text-align: center; 
+            padding: 18px; 
+            margin-top: 30px; 
+            font-size: 0.9rem;
+        } 
+    </style>
+    <!-- 👉 Agregué la fuente desde Google Fonts para que se vea igual en todos los dispositivos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head> 
+<body> 
+ 
+    <header> 
+        <h1>    Sistema de Gestión de Incidentes</h1> 
+        <p>Universidad Técnica de Manabí - Listado de Reportes</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="index.html">        Inicio</a> 
+        <a href="reportar.html">           Reportar Incidente</a> 
+        <a href="tickets.html" class="activo">        Ver Tickets</a> 
+    </nav> 
+ 
+    <main> 
+        <section> 
+            <h2>        Listado Organizado de Tickets Registrados</h2> 
+             
+            <table> 
+                <thead> 
+                    <tr> 
+                        <th>N° Ticket</th> 
+                        <th>Fecha</th> 
+                        <th>Título / Asunto</th> 
+                        <th>Categoría</th> 
+                        <th>Prioridad</th> 
+                        <th>Estado Actual</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>INC-001</td> 
+                        <td>02/06/2026</td> 
+                        <td>Sin conexión a internet</td> 
+                        <td>       Red</td> 
+                        <td class="estado-alta">    Alta</td> 
+                        <td class="estado-proceso">En Proceso</td> 
+                    </tr> 
+                    <tr> 
+                        <td>INC-002</td> 
+                        <td>01/06/2026</td> 
+                        <td>Equipo no enciende / Monitor</td> 
+                        <td>      Hardware</td> 
+                        <td class="estado-media">    Media</td> 
+                        <td class="estado-proceso">En Proceso</td> 
+                    </tr> 
+                    <tr> 
+                        <td>INC-003</td> 
+                        <td>30/05/2026</td> 
+                        <td>Error al ingresar al sistema</td> 
+                        <td>       Software</td> 
+                        <td class="estado-alta">    Alta</td> 
+                        <td class="estado-baja">Solucionado</td> 
+                    </tr> 
+                    <tr> 
+                        <td>INC-004</td> 
+                        <td>02/06/2026</td> 
+                        <td>Teclado no responde</td> 
+                        <td>      Hardware</td> 
+                        <td class="estado-baja">    Baja</td> 
+                        <td class="estado-baja">Solucionado</td> 
+                    </tr> 
+                    <tr> 
+                        <td>INC-005</td> 
+                        <td>03/06/2026</td> 
+                        <td>Lentitud en la red general</td> 
+                        <td>       Red</td> 
+                        <td class="estado-media">    Media</td> 
+                        <td class="estado-proceso">Pendiente</td> 
+                    </tr> 
+                </tbody> 
+            </table> 
+        </section> 
+    </main> 
+ 
+    <footer> 
+        <p>© 2026 - Desarrollado por Estudiante | Universidad técnica de manabí | 
+desarrollo de sistemas informáticos</p> 
+    </footer> 
+ 
+</body> 
+</html>

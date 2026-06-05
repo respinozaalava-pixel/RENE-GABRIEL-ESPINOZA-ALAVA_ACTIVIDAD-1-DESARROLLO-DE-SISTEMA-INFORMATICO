@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Reportar Nuevo Incidente</title> 
+    <!-- Nuevas fuentes agregadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            /* Cambio de tipografía principal */
+            font-family: 'Work Sans', sans-serif; 
+        } 
+        body { 
+            /* Fondo con tono más suave y claro */
+            background-color: #f0f4f8; 
+            line-height: 1.6; 
+        } 
+        nav { 
+            /* Nuevo color de barra de navegación: tono azul oscuro elegante */
+            background-color: #1e3a8a; 
+            padding: 15px; 
+        } 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 20px; 
+            margin: 0 5px; 
+            font-weight: 500; 
+            display: inline-block; 
+            /* Tipografía distinta para menú */
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        } 
+        nav a:hover, .activo { 
+            /* Color de resaltado más brillante y moderno */
+            background-color: #3b82f6; 
+            border-radius: 6px; /* Bordes un poco más redondeados */
+        } 
+        header { 
+            /* Encabezado con color combinado con la navegación */
+            background-color: #162d70; 
+            color: white; 
+            padding: 22px; 
+            text-align: center; 
+        } 
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 26px;
+        }
+        header p {
+            font-size: 16px;
+            opacity: 0.92;
+            margin-top: 6px;
+        }
+        main { 
+            max-width: 700px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+        } 
+        section { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 12px; /* Bordes más suaves */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07); /* Sombra más suave y difusa */
+        } 
+        h2 { 
+            /* Color de título cambiado a tono azul grisáceo profesional */
+            color: #1e293b; 
+            margin-bottom: 25px; 
+            text-align: center; 
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 22px;
+        } 
+        form label { 
+            display: block; 
+            margin: 15px 0 5px; 
+            font-weight: 500; 
+            /* Color de texto más suave */
+            color: #334155; 
+            font-size: 15px;
+        } 
+        form input[type="text"], form select, form textarea { 
+            width: 100%; 
+            padding: 11px; 
+            border: 1px solid #cbd5e1; /* Borde de color más claro */
+            border-radius: 6px; /* Bordes redondeados en campos */
+            font-size: 1em; 
+            transition: border 0.3s;
+        } 
+        form input[type="text"]:focus, form select:focus, form textarea:focus {
+            outline: none;
+            border-color: #3b82f6; /* Resaltado al seleccionar */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+        .opciones-prioridad { 
+            margin: 10px 0; 
+            display: flex; 
+            gap: 25px; 
+            flex-wrap: wrap; 
+        } 
+        .opciones-prioridad label {
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        .opciones-prioridad label:hover {
+            background-color: #e0e7ff;
+        }
+        button { 
+            /* Nuevo color de botón: verde más brillante y fresco */
+            background-color: #10b981; 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 6px; 
+            font-size: 1.1em; 
+            margin-top: 20px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-weight: 600; 
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s ease;
+        } 
+        button:hover { 
+            background-color: #059669; /* Tono más oscuro al pasar el mouse */
+        } 
+        footer { 
+            /* Pie de página con mismo tono que la navegación */
+            background-color: #1e3a8a; 
+            color: white; 
+            text-align: center; 
+            padding: 18px; 
+            margin-top: 30px; 
+            font-size: 14px;
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+    <header> 
+        <h1>    Sistema de Gestión de Incidentes</h1> 
+        <p>Registro de Nuevo Reporte</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="index.html">        Inicio</a> 
+        <a href="reportar.html" class="activo">           Reportar Incidente</a> 
+        <a href="tickets.html">        Ver Tickets</a> 
+    </nav> 
+ 
+    <main> 
+        <section> 
+            <h2>Formulario de Ingreso de Incidentes</h2> 
+ 
+            <form action="#" method="post"> 
+                <label for="titulo">Título del Incidente:</label> 
+                <input type="text" id="titulo" name="titulo" placeholder="Ej: Fallo de conexión en oficina 2" required> 
+ 
+                <label for="categoria">Categoría:</label> 
+                <select id="categoria" name="categoria" required> 
+                    <option value="">-- Seleccione una opción --</option> 
+                    <option value="red">       Red / Conectividad</option> 
+                    <option value="hardware">      Hardware / Equipos</option> 
+                    <option value="software">       Software / Programas</option> 
+                </select> 
+ 
+                <label>Nivel de Prioridad:</label> 
+                <div class="opciones-prioridad"> 
+                    <label><input type="radio" name="prioridad" value="alta" required> Alta</label> 
+                    <label><input type="radio" name="prioridad" value="media"> Media</label> 
+                    <label><input type="radio" name="prioridad" value="baja"> Baja</label> 
+                </div> 
+ 
+                <label for="descripcion">Descripción Detallada del Problema:</label> 
+                <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escribe aquí detalladamente qué sucede, cuándo ocurrió y cualquier dato importante..." required></textarea> 
+ 
+                <button type="submit">     ENVIAR REPORTE</button> 
+            </form> 
+        </section> 
+    </main> 
+ 
+    <footer> 
+        <p>© 2026 - Desarrollado por Estudiante | Universidad Técnica de Manabí</p> 
+    </footer> 
+ 
+</body> 
+</html>
