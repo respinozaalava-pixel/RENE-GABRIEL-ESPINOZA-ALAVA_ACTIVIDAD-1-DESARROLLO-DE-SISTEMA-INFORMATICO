@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System - Gestión de Incidentes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <header style="margin-bottom: 2.5rem;">
+      <h1 style="color: var(--color-primario); font-size: 1.8rem;">📦 Sistema de Diseño UI</h1>
+      <p style="color: var(--color-texto-secundario);">Librería de componentes reutilizables para el sistema de Help Desk</p>
+    </header>
+
+    <!-- Sección Botones -->
+    <section class="seccion">
+      <h2>Botones</h2>
+      <button class="btn btn--primario">Botón Primario</button>
+      <button class="btn btn--secundario">Botón Secundario</button>
+      <button class="btn btn--peligro">Botón de Peligro</button>
+    </section>
+
+    <!-- Sección Formularios -->
+    <section class="seccion">
+      <h2>Campos de Formulario</h2>
+      <div class="grupo-campo">
+        <label for="solicitante">Nombre del solicitante</label>
+        <input type="text" id="solicitante" class="input-text" placeholder="Ingrese su nombre completo">
+      </div>
+      <div class="grupo-campo">
+        <label for="categoria">Categoría del incidente</label>
+        <select id="categoria" class="select">
+          <option value="">Seleccione una opción</option>
+          <option value="hardware">Fallo de Hardware</option>
+          <option value="software">Error de Software</option>
+          <option value="red">Problemas de Red</option>
+          <option value="acceso">Permisos y Acceso</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Sección Tarjetas -->
+    <section class="seccion">
+      <h2>Tarjetas de Información</h2>
+      <div class="tarjeta">
+        <h3 class="tarjeta__titulo">Ticket #INC-2026-0145</h3>
+        <p class="tarjeta__descripcion">No se puede imprimir documentos desde la impresora del área de contabilidad. El equipo muestra mensaje de error de conexión.</p>
+        <span class="etiqueta etiqueta--alta">Prioridad Alta</span>
+      </div>
+    </section>
+
+    <!-- Sección Etiquetas -->
+    <section class="seccion">
+      <h2>Etiquetas de Prioridad</h2>
+      <span class="etiqueta etiqueta--alta">Alta</span>
+      <span class="etiqueta etiqueta--media">Media</span>
+      <span class="etiqueta etiqueta--baja">Baja</span>
+    </section>
+  </div>
+</body>
+</html>

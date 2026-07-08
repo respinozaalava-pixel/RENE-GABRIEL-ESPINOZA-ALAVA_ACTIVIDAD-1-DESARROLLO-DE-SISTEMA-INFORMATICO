@@ -1,0 +1,226 @@
+/* =============================================
+   SISTEMA DE DISEÑO - GESTIÓN DE INCIDENTES
+   Universidad Técnica de Manabí
+   Desarrollo de Sistemas Informáticos
+   ============================================= */
+
+/* 1. CONFIGURACIÓN GLOBAL Y VARIABLES CSS */
+:root {
+  /* Paleta de colores corporativa */
+  --color-primario: #165DFF;
+  --color-primario-hover: #0E42CC;
+  --color-secundario: #86909C;
+  --color-secundario-hover: #6B7785;
+  --color-exito: #00B42A;
+  --color-advertencia: #FF7D00;
+  --color-error: #F53F3F;
+
+  /* Colores neutros */
+  --color-fondo: #F2F3F5;
+  --color-fondo-blanco: #FFFFFF;
+  --color-texto: #1D2129;
+  --color-texto-secundario: #4E5969;
+  --color-borde: #E5E6EB;
+
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --tamano-base: 16px;
+  --altura-linea: 1.6;
+
+  /* Espaciados, bordes y sombras */
+  --radio-borde-sm: 4px;
+  --radio-borde-md: 6px;
+  --radio-borde-lg: 8px;
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --enfoque: 0 0 0 3px rgba(22, 93, 255, 0.2);
+}
+
+/* Modelo de cajas obligatorio */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base del documento */
+body {
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-base);
+  line-height: var(--altura-linea);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  padding: 2rem;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para secciones de demostración */
+.seccion {
+  background: var(--color-fondo-blanco);
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radio-borde-lg);
+  box-shadow: var(--sombra-suave);
+}
+
+.seccion h2 {
+  font-size: 1.3rem;
+  color: var(--color-primario);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* =============================================
+   2. COMPONENTES: BOTONES
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: var(--radio-borde-md);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: var(--enfoque);
+}
+
+.btn--primario {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.btn--primario:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.btn--secundario {
+  background-color: var(--color-secundario);
+  color: white;
+}
+
+.btn--secundario:hover {
+  background-color: var(--color-secundario-hover);
+}
+
+.btn--peligro {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.btn--peligro:hover {
+  background-color: #D21C1C;
+}
+
+/* =============================================
+   3. COMPONENTES: FORMULARIOS
+   ============================================= */
+.grupo-campo {
+  margin-bottom: 1.2rem;
+}
+
+.grupo-campo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-texto);
+}
+
+.input-text,
+.select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  font-size: 1rem;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.input-text:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: var(--enfoque);
+}
+
+/* =============================================
+   4. COMPONENTES: TARJETAS
+   ============================================= */
+.tarjeta {
+  max-width: 480px;
+  background-color: white;
+  border-radius: var(--radio-borde-lg);
+  box-shadow: var(--sombra-media);
+  padding: 1.6rem;
+  border-left: 4px solid var(--color-primario);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-2px);
+}
+
+.tarjeta__titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--color-texto);
+}
+
+.tarjeta__descripcion {
+  color: var(--color-texto-secundario);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* =============================================
+   5. COMPONENTES: ETIQUETAS / ALERTAS
+   ============================================= */
+.etiqueta {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.etiqueta--alta {
+  background-color: var(--color-error);
+}
+
+.etiqueta--media {
+  background-color: var(--color-advertencia);
+}
+
+.etiqueta--baja {
+  background-color: var(--color-exito);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .input-text, .select {
+    max-width: 100%;
+  }
+}
