@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <nav class="navegacion">
+            <ul>
+                <li><a href="dashboard.html">Inicio</a></li>
+                <li><a href="reportar.html">Reportar Incidente</a></li>
+                <li><a href="tickets.html">Ver Tickets</a></li>
+                <li><a href="index.html">Componentes</a></li>
+            </ul>
+        </nav>
+
+        <h1>Panel Principal</h1>
+        <p style="margin-bottom: 2rem;">Bienvenido al sistema de gestión de incidentes.</p>
+
+        <div class="grid-dashboard">
+            <div class="tarjeta">
+                <h3 class="tarjeta__titulo">Tickets Abiertos</h3>
+                <p class="tarjeta__contenido">Total: 12</p>
+                <span class="etiqueta etiqueta-alta">3 urgentes</span>
+            </div>
+            <div class="tarjeta">
+                <h3 class="tarjeta__titulo">En Proceso</h3>
+                <p class="tarjeta__contenido">Total: 5</p>
+                <span class="etiqueta etiqueta-media">En atención</span>
+            </div>
+            <div class="tarjeta">
+                <h3 class="tarjeta__titulo">Resueltos</h3>
+                <p class="tarjeta__contenido">Total: 28</p>
+                <span class="etiqueta etiqueta-baja">Finalizados</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
